@@ -1,7 +1,7 @@
 package de.quiz;
 
-import de.salocin.gameenginefx.Scheduler;
-import de.salocin.gameenginefx.core.AppletGame;
+import de.quiz.engine.Scheduler;
+import de.quiz.engine.core.AppletGame;
 
 /**
  * Run this class as "Java Applet"

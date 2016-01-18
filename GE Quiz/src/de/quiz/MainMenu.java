@@ -1,9 +1,9 @@
 package de.quiz;
 
-import de.salocin.gameenginefx.gui.Button;
-import de.salocin.gameenginefx.gui.layout.RelativeData;
-import de.salocin.gameenginefx.render.MenuRenderState;
-import de.salocin.gameenginefx.util.FXHelper;
+import de.quiz.engine.gui.Button;
+import de.quiz.engine.gui.layout.RelativeData;
+import de.quiz.engine.render.MenuRenderState;
+import de.quiz.engine.util.FXHelper;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
