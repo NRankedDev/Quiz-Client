@@ -1,4 +1,4 @@
-package de.salocin.quiz;
+package de.quiz;
 
 import de.salocin.gameenginefx.gui.Button;
 import de.salocin.gameenginefx.gui.layout.RelativeData;

@@ -1,4 +1,4 @@
-package de.salocin.quiz;
+package de.quiz;
 
 import de.salocin.gameenginefx.render.MenuRenderState;
 import javafx.scene.canvas.Canvas;

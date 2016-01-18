@@ -1,4 +1,4 @@
-package de.salocin.quiz;
+package de.quiz;
 
 import de.salocin.gameenginefx.Scheduler;
 import de.salocin.gameenginefx.plugin.CorePlugin;
