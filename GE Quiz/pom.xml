@@ -8,7 +8,7 @@
   <repositories>
   	<repository>
   		<id>my-repo</id>
-  		<url>http://repo.nekeras.com</url>
+  		<url>http://maven.nekeras.com</url>
   	</repository>
   </repositories>
   
