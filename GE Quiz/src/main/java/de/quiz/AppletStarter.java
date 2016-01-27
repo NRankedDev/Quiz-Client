@@ -1,5 +1,6 @@
 package de.quiz;
 
+import de.quiz.state.MainMenu;
 import de.salocin.gameenginefx.Scheduler;
 import de.salocin.gameenginefx.core.AppletGame;
 

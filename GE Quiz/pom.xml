@@ -13,11 +13,11 @@
   </repositories>
   
   <dependencies>
-	  <dependency>
-	  	<groupId>de.salocin</groupId>
+  	<dependency>
+		<groupId>de.salocin</groupId>
 	  	<artifactId>game-engine-fx</artifactId>
 	  	<version>0.0.1</version>
-	  </dependency>
+	</dependency>
   </dependencies>
   
   <build>
@@ -31,5 +31,5 @@
 		    </configuration>
 		</plugin>
 	</plugins>
-	</build>
+  </build>
 </project>

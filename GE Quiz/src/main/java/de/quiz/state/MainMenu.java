@@ -1,5 +1,6 @@
-package de.quiz;
+package de.quiz.state;
 
+import de.salocin.gameenginefx.Scheduler;
 import de.salocin.gameenginefx.gui.Button;
 import de.salocin.gameenginefx.gui.layout.RelativeData;
 import de.salocin.gameenginefx.render.MenuRenderState;
@@ -18,7 +19,7 @@ public class MainMenu extends MenuRenderState {
 		Button play = new Button("Play");
 		play.setBackgroundColor(Color.RED);
 		play.setListener(() -> {
-		
+			Scheduler.getInstance().setState(ConnectionScreen.INSTANCE);
 		});
 		
 		Button options = new Button("Options");
@@ -30,7 +31,7 @@ public class MainMenu extends MenuRenderState {
 		Button exit = new Button("Exit");
 		exit.setBackgroundColor(Color.RED);
 		exit.setListener(() -> {
-		
+			// Scheduler.getInstance().exit(0);
 		});
 		
 		addComponent(play, new RelativeData().top(0, 20).centeredWidth(200).height(50));
