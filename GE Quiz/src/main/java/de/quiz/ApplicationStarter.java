@@ -1,8 +1,8 @@
 package de.quiz;
 
-import de.quiz.engine.Scheduler;
-import de.quiz.engine.plugin.CorePlugin;
-import de.quiz.engine.plugin.PluginManager;
+import de.salocin.gameenginefx.Scheduler;
+import de.salocin.gameenginefx.plugin.CorePlugin;
+import de.salocin.gameenginefx.plugin.PluginManager;
 
 public class ApplicationStarter implements CorePlugin {
 	

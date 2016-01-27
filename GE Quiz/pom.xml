@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.quiz</groupId>
+  <artifactId>quiz</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Quiz</name>
+  
+  <repositories>
+  	<repository>
+  		<id>my-repo</id>
+  		<url>http://repo.nekeras.com</url>
+  	</repository>
+  </repositories>
+  
+  <dependencies>
+	  <dependency>
+	  	<groupId>de.salocin</groupId>
+	  	<artifactId>game-engine-fx</artifactId>
+	  	<version>0.0.1</version>
+	  </dependency>
+  </dependencies>
+  
+  <build>
+	<plugins>
+		<plugin>
+	  		<!-- Setting compiler to Java 8 -->
+		    <artifactId>maven-compiler-plugin</artifactId>
+		    <configuration>
+		        <source>1.8</source>
+		        <target>1.8</target>
+		    </configuration>
+		</plugin>
+	</plugins>
+	</build>
+</project>
