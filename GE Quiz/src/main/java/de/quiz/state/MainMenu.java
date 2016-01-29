@@ -31,7 +31,7 @@ public class MainMenu extends MenuRenderState {
 		Button exit = new Button("Exit");
 		exit.setBackgroundColor(Color.RED);
 		exit.setListener(() -> {
-			// Scheduler.getInstance().exit(0);
+			Scheduler.getInstance().shutdown(0);
 		});
 		
 		addComponent(play, new RelativeData().top(0, 20).centeredWidth(200).height(50));
