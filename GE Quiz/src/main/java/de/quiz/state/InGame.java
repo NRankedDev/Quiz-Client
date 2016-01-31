@@ -13,7 +13,7 @@ public class InGame extends MenuRenderState {
 	
 	public static final InGame INSTANCE = new InGame();
 	
-	private static final Font LABEL_FONT = new Font("Arial Bold", 20);
+	private static final Font LABEL_FONT = new Font("Segoe Print", 20);
 	private static final Color LABEL_TITLE = Color.WHITE;
 	private static final Color LABEL_BACKGROUND = Color.rgb(51, 204, 255);
 	private static final double LABEL_WIDTH = 250.0;
@@ -64,18 +64,24 @@ public class InGame extends MenuRenderState {
 		addComponent(ANSWER_3_LABEL);
 		addComponent(ANSWER_4_LABEL);
 		
-		question = new QuestionPacket("Beantworte diese Frage", "Richtig", "Falsch", "Falsch", "Falsch");
-	}
-	
-	@Override
-	public void update(Canvas canvas, long delta, long fps) {
-		super.update(canvas, delta, fps);
+		question = new QuestionPacket("Beantworte diese Frage\nSecond line", "Richtig oder falsch das ist hier die Frage. Ja, da stimme ich dir vollkommen zu!", "Falsch", "Falsch", "Falsch");
 		
 		QUESTION_LABEL.setTitle(question.getQuestion());
 		ANSWER_1_LABEL.setTitle(question.getAnswers()[0]);
 		ANSWER_2_LABEL.setTitle(question.getAnswers()[1]);
 		ANSWER_3_LABEL.setTitle(question.getAnswers()[2]);
 		ANSWER_4_LABEL.setTitle(question.getAnswers()[3]);
+	}
+	
+	@Override
+	public void update(Canvas canvas, long delta, long fps) {
+		super.update(canvas, delta, fps);
+		
+		// QUESTION_LABEL.setTitle(question.getQuestion());
+		// ANSWER_1_LABEL.setTitle(question.getAnswers()[0]);
+		// ANSWER_2_LABEL.setTitle(question.getAnswers()[1]);
+		// ANSWER_3_LABEL.setTitle(question.getAnswers()[2]);
+		// ANSWER_4_LABEL.setTitle(question.getAnswers()[3]);
 	}
 	
 	@Override

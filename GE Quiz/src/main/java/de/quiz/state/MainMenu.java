@@ -54,7 +54,7 @@ public class MainMenu extends MenuRenderState {
 		gc.setFont(new Font("Consolas", 18));
 		String s = "FPS: " + fps;
 		
-		gc.fillText(s, 10, 10 + FXHelper.getStringHeight(gc.getFont(), s) / 2);
+		gc.fillText(s, 10, 10 + FXHelper.getStringHeight(gc.getFont()) / 2);
 	}
 	
 }
