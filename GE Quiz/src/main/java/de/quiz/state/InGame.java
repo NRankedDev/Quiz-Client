@@ -3,6 +3,7 @@ package de.quiz.state;
 import de.quiz.net.QuestionPacket;
 import de.salocin.gameenginefx.gui.Component;
 import de.salocin.gameenginefx.gui.layout.RelativeData;
+import de.salocin.gameenginefx.gui.text.TextAlgin;
 import de.salocin.gameenginefx.render.MenuRenderState;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -16,7 +17,7 @@ public class InGame extends MenuRenderState {
 	private static final Font LABEL_FONT = new Font("Segoe Print", 20);
 	private static final Color LABEL_TITLE = Color.WHITE;
 	private static final Color LABEL_BACKGROUND = Color.rgb(51, 204, 255);
-	private static final double LABEL_WIDTH = 250.0;
+	private static final double LABEL_WIDTH_PERCENTAGE = 25;
 	private static final double LABEL_HEIGHT = 100.0;
 	private static final double LABEL_PADDING = 10.0;
 	
@@ -30,33 +31,43 @@ public class InGame extends MenuRenderState {
 	
 	@Override
 	public void init(Canvas canvas) {
-		double startXOffset = -LABEL_WIDTH - LABEL_PADDING / 2;
+//		double startXOffset = -LABEL_WIDTH - LABEL_PADDING / 2;
 		double startYOffset = -(LABEL_HEIGHT * 2) - LABEL_PADDING;
 		
 		QUESTION_LABEL.setTitleColor(LABEL_TITLE);
 		QUESTION_LABEL.setTitleFont(LABEL_FONT);
 		QUESTION_LABEL.setBackgroundColor(LABEL_BACKGROUND);
-		QUESTION_LABEL.setLayoutData(new RelativeData().top(50, startYOffset).left(50, startXOffset).width(LABEL_WIDTH * 2 + LABEL_PADDING).height(LABEL_HEIGHT * 2));
+		QUESTION_LABEL.setTitleHorizontalAlgin(TextAlgin.ABSOLUTE);
+		QUESTION_LABEL.setTitleVerticalAlgin(TextAlgin.ABSOLUTE);
+		QUESTION_LABEL.setLayoutData(new RelativeData().top(50, startYOffset).left(50 - LABEL_WIDTH_PERCENTAGE, 0).width(LABEL_WIDTH_PERCENTAGE, 0).height(LABEL_HEIGHT * 2));
 		
 		ANSWER_1_LABEL.setTitleColor(LABEL_TITLE);
 		ANSWER_1_LABEL.setTitleFont(LABEL_FONT);
 		ANSWER_1_LABEL.setBackgroundColor(LABEL_BACKGROUND);
-		ANSWER_1_LABEL.setLayoutData(new RelativeData().top(QUESTION_LABEL).left(50, startXOffset).width(LABEL_WIDTH).height(LABEL_HEIGHT));
+		ANSWER_1_LABEL.setTitleHorizontalAlgin(TextAlgin.ABSOLUTE);
+		ANSWER_1_LABEL.setTitleVerticalAlgin(TextAlgin.ABSOLUTE);
+		ANSWER_1_LABEL.setLayoutData(new RelativeData().top(QUESTION_LABEL).left(50 - LABEL_WIDTH_PERCENTAGE, 0).width(LABEL_WIDTH_PERCENTAGE, 0).height(LABEL_HEIGHT));
 		
 		ANSWER_2_LABEL.setTitleColor(LABEL_TITLE);
 		ANSWER_2_LABEL.setTitleFont(LABEL_FONT);
 		ANSWER_2_LABEL.setBackgroundColor(LABEL_BACKGROUND);
-		ANSWER_2_LABEL.setLayoutData(new RelativeData().top(QUESTION_LABEL).left(ANSWER_1_LABEL, LABEL_PADDING).width(LABEL_WIDTH).height(LABEL_HEIGHT));
+		ANSWER_2_LABEL.setTitleHorizontalAlgin(TextAlgin.ABSOLUTE);
+		ANSWER_2_LABEL.setTitleVerticalAlgin(TextAlgin.ABSOLUTE);
+		ANSWER_2_LABEL.setLayoutData(new RelativeData().top(QUESTION_LABEL).left(ANSWER_1_LABEL, LABEL_PADDING).width(25, 0).height(LABEL_HEIGHT));
 		
 		ANSWER_3_LABEL.setTitleColor(LABEL_TITLE);
 		ANSWER_3_LABEL.setTitleFont(LABEL_FONT);
 		ANSWER_3_LABEL.setBackgroundColor(LABEL_BACKGROUND);
-		ANSWER_3_LABEL.setLayoutData(new RelativeData().top(ANSWER_1_LABEL).left(50, startXOffset).width(LABEL_WIDTH).height(LABEL_HEIGHT));
+		ANSWER_3_LABEL.setTitleHorizontalAlgin(TextAlgin.ABSOLUTE);
+		ANSWER_3_LABEL.setTitleVerticalAlgin(TextAlgin.ABSOLUTE);
+		ANSWER_3_LABEL.setLayoutData(new RelativeData().top(ANSWER_1_LABEL).left(50 - LABEL_WIDTH_PERCENTAGE, 0).width(LABEL_WIDTH_PERCENTAGE, 0).height(LABEL_HEIGHT));
 		
 		ANSWER_4_LABEL.setTitleColor(LABEL_TITLE);
 		ANSWER_4_LABEL.setTitleFont(LABEL_FONT);
 		ANSWER_4_LABEL.setBackgroundColor(LABEL_BACKGROUND);
-		ANSWER_4_LABEL.setLayoutData(new RelativeData().top(ANSWER_2_LABEL).left(ANSWER_3_LABEL, LABEL_PADDING).width(LABEL_WIDTH).height(LABEL_HEIGHT));
+		ANSWER_4_LABEL.setTitleHorizontalAlgin(TextAlgin.ABSOLUTE);
+		ANSWER_4_LABEL.setTitleVerticalAlgin(TextAlgin.ABSOLUTE);
+		ANSWER_4_LABEL.setLayoutData(new RelativeData().top(ANSWER_2_LABEL).left(ANSWER_3_LABEL, LABEL_PADDING).width(LABEL_WIDTH_PERCENTAGE, 0).height(LABEL_HEIGHT));
 		
 		addComponent(QUESTION_LABEL);
 		addComponent(ANSWER_1_LABEL);
