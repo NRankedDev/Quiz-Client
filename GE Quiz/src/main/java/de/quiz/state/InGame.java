@@ -14,7 +14,7 @@ public class InGame extends MenuRenderState {
 	
 	public static final InGame INSTANCE = new InGame();
 	
-	private static final Font LABEL_FONT = new Font("Segoe Print", 0);
+	private static final Font LABEL_FONT = new Font("Segoe Print", 20);
 	private static final Color LABEL_TITLE = Color.WHITE;
 	private static final Color LABEL_BACKGROUND = Color.rgb(51, 204, 255);
 	private static final double LABEL_WIDTH_PERCENTAGE = 25;
